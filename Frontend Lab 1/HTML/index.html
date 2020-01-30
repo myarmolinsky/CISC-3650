@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <title>Frontend Lab 1</title>
+  <body>
+    <!--<p> tag puts everything inside it into a paragraph separate from other tags on the same layer as it-->
+    <!--<strong> tag makes the text inside it bold-->
+    <!--<em> tag makes the text inside it italicized-->
+    <!--<br /> skips a line and it is a self closing tag-->
+    <!--heading tags are h1-h6, h1 being the biggest heading and h6 the smallest.
+        the text that goes inside is treated as a heading-->
+    <!--<ul> tag is for unordered lists which use bullet points, <ol> is for ordered lists which use numbers.
+        inside either of those tags, <li> tags are used to define each list item-->
+    <!--<a> tags are anchor tags.
+        give them an href property set to a link in quotes and clicking on the text inside the tags will take you to the site-->
+    <!--<img /> is an image tag. it is selfclosing and you give the property of src set to a link or directory to load a picture.
+        you can also give it properties of height and width to adjust the height and width of the give picture-->
+    <!--<table> makes a table.
+        inside the table tags you use <tr> to make table rows, inside which you make data cells with <td>
+        <th> is for table headers-->
+    <!--<form> is the form tag.
+        it will contain <input> tags which would be given various types depending on the info the take in
+        the types for input tags are:
+        "text" which is for standard text
+        "password" which keeps the characters hidden
+        "checkbox" which creates a checkbox which can be toggled ("checked" can follow this type property to check it by default
+        "radio" is like "checkbox" except only one input with type "radio" can be selected per group of "radio" type inputs
+        "submit" is a button which will submit the form
+        (giving an input with "submit" for the type property a value property will set the button's text to the text in the value-->
+    <!--<textarea> creates a large multiline text area with a given amount of rows and columns
+        (as provided in the properties via "rows" and "cols" properties respectively)
+        the user may resize it and any text put inside the tag will be inside it by default for the user to overwrite-->
+    <!--<select> tag uses <option> tags inside it to give the user options
+        upon submission of the form, the option the user chose will be the one submitted
+        an option can be made the default option by putting "selected" in the first half of the tag-->
+    <!--forms have a action and method property
+        the action property is where you put where to submit the data to
+        the method property is where you put how you would like to submit the data (post, get, delete)-->
+    <!--Submitting a form refreshes the page-->
+    <h1>BIG TEXT</h1>
+    <p><strong>Test</strong> <em>Text</em><br />More Text</p>
+    <h6>little text</h6>
+    <ul>
+      <li>one</li>
+      <li>two</li>
+      <li>three</li>
+    </ul>
+    <ol>
+      <li>one</li>
+      <li>two</li>
+      <li>three</li>
+    </ol>
+    <p><a href="https://github.com/myarmolinsky">My GitHub</a></p>
+    <img
+      src="https://cdn.bulbagarden.net/upload/7/79/Dream_Pok%C3%A9_Ball_Sprite.png"
+    />
+    <img
+      height="100px"
+      width="100px"
+      src="../../../../Downloads/prof pic.png"
+    />
+    <table style="width:100%">
+      <tr>
+        <th>Column 1</th>
+        <th>Column 2</th>
+        <th>Column 3</th>
+      </tr>
+      <tr>
+        <td>Row 1, Cell 1</td>
+        <td>Row 1, Cell 2</td>
+        <td>Row 1, Cell 3</td>
+      </tr>
+      <tr>
+        <td>Row 2, Cell 1</td>
+        <td>Row 2, Cell 2</td>
+        <td>Row 2, Cell 3</td>
+      </tr>
+      <tr>
+        <td>Row 3, Cell 1</td>
+        <td>Row 3, Cell 2</td>
+        <td>Row 3, Cell 3</td>
+      </tr>
+      <tr>
+        <td>Row 4, Cell 1</td>
+        <td>Row 4, Cell 2</td>
+        <td>Row 4, Cell 3</td>
+      </tr>
+    </table>
+
+    <textarea rows="10" cols="50">sample text</textarea>
+
+    <!--Example of a form-->
+    <form>
+      <p>Name:</p>
+      <p><input type="text" name="name" value="Your name" /></p>
+
+      <p>Species:</p>
+      <p><input name="species" /></p>
+      <!-- remember: 'type="text"' isn't actually necessary -->
+
+      <p>Comments:</p>
+      <p>
+        <textarea name="comments" rows="5" cols="20">Your comments</textarea>
+      </p>
+
+      <p>Are you:</p>
+      <p><input type="radio" name="areyou" value="male" /> Male</p>
+      <p><input type="radio" name="areyou" value="female" /> Female</p>
+      <p>
+        <input type="radio" name="areyou" value="hermaphrodite" /> An
+        hermaphrodite
+      </p>
+      <p><input type="radio" name="areyou" value="asexual" /> Asexual</p>
+
+      <p><input type="submit" /></p>
+    </form>
+  </body>
+</html>
