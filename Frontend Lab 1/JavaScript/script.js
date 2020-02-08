@@ -17,23 +17,10 @@ function changeSecondDivBackground() {
       : "pink";
 }
 
-function alphanumericOnly() {
-  document.getElementById("username").innerHTML = document
-    .getElementById("username")
-    .innerHTML.split("")
-    .filter(
-      char =>
-        (char.charCodeAt(0) > 47 && char.charCodeAt(0) < 58) ||
-        (char.charCodeAt(0) > 64 && char.charCodeAt(0) < 91) ||
-        (char.charCodeAt(0) > 96 && char.charCodeAt(0) < 123)
-    )
-    .join("");
-}
-
 function checkPasswords() {
   if (
-    document.getElementById("secret1").innerHTML ===
-    document.getElementById("secret2").innerHTML
+    document.getElementById("secret1").value ===
+    document.getElementById("secret2").value
   ) {
     document.getElementById("secret1").style.backgroundcolor = "orange";
     document.getElementById("secret2").style.backgroundcolor = "orange";
