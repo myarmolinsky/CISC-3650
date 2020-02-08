@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="style.css" />*/
   </style>
   <link rel="stylesheet" href="../CSS/style.css" />
+  <script src="../JavaScript/script.js"></script>
   <body>
     <!--<p> tag puts everything inside it into a paragraph separate from other tags on the same layer as it-->
     <!--<strong> tag makes the text inside it bold-->
@@ -44,82 +45,89 @@
         the action property is where you put where to submit the data to
         the method property is where you put how you would like to submit the data (post, get, delete)-->
     <!--Submitting a form refreshes the page-->
-    <h1>BIG TEXT</h1>
-    <p><strong>Test</strong> <em>Text</em><br />More Text</p>
-    <h6>little text</h6>
+    <div id="first" class="first">This is the first div tag</div>
+    <div id="second" class="second">This is the second div tag</div>
+    <div id="third" class="third">This is the third div tag</div>
+    <br />
+    <button onClick="changeThirdDiv()">Change The Third Div's Text</button
+    ><button onClick="changeSecondDivBackground()">
+      Change The Second Div's Background
+    </button>
+    <br /><br />
+    <div>List of materials:</div>
     <ul>
-      <li>one</li>
-      <li>two</li>
-      <li>three</li>
+      <li>Plastic</li>
+      <li>Rubber</li>
+      <li>Aluminum</li>
     </ul>
-    <ol>
-      <li>one</li>
-      <li>two</li>
-      <li>three</li>
-    </ol>
-    <p><a href="https://github.com/myarmolinsky">My GitHub</a></p>
-    <img
-      src="https://cdn.bulbagarden.net/upload/7/79/Dream_Pok%C3%A9_Ball_Sprite.png"
-    />
-    <img
-      height="100px"
-      width="100px"
-      src="../../../../Downloads/prof pic.png"
-    />
-    <table style="width:100%">
-      <tr>
-        <th>Column 1</th>
-        <th>Column 2</th>
-        <th>Column 3</th>
-      </tr>
-      <tr>
-        <td>Row 1, Cell 1</td>
-        <td>Row 1, Cell 2</td>
-        <td>Row 1, Cell 3</td>
-      </tr>
-      <tr>
-        <td>Row 2, Cell 1</td>
-        <td>Row 2, Cell 2</td>
-        <td>Row 2, Cell 3</td>
-      </tr>
-      <tr>
-        <td>Row 3, Cell 1</td>
-        <td>Row 3, Cell 2</td>
-        <td>Row 3, Cell 3</td>
-      </tr>
-      <tr>
-        <td>Row 4, Cell 1</td>
-        <td>Row 4, Cell 2</td>
-        <td>Row 4, Cell 3</td>
-      </tr>
+    <table>
+      <tbody>
+        <tr>
+          <td>Left</td>
+          <td>Middle</td>
+          <td>Right</td>
+        </tr>
+        <tr>
+          <td>Something</td>
+          <td>Else</td>
+          <td>DataCell</td>
+        </tr>
+        <tr>
+          <td>Box</td>
+          <td>testText</td>
+          <td>LeArNiNg</td>
+        </tr>
+      </tbody>
     </table>
-
-    <textarea rows="10" cols="50">sample text</textarea>
-
-    <!--Example of a form-->
     <form>
-      <p>Name:</p>
-      <p><input type="text" name="name" value="Your name" /></p>
-
-      <p>Species:</p>
-      <p><input name="species" /></p>
-      <!-- remember: 'type="text"' isn't actually necessary -->
-
-      <p>Comments:</p>
-      <p>
-        <textarea name="comments" rows="5" cols="20">Your comments</textarea>
-      </p>
-
-      <p>Are you:</p>
-      <p><input type="radio" name="areyou" value="male" /> Male</p>
-      <p><input type="radio" name="areyou" value="female" /> Female</p>
-      <p>
-        <input type="radio" name="areyou" value="hermaphrodite" /> An
-        hermaphrodite
-      </p>
-      <p><input type="radio" name="areyou" value="asexual" /> Asexual</p>
-
-      <p><input type="submit" /></p>
+      <h3>Which of these animals do you like most?</h3>
+      <select>
+        <option>Giraffe</option>
+        <option>Zebra</option>
+        <option>Lion</option>
+      </select>
+      <h3>Select all the foods you like from this list:</h3>
+      <select multiple>
+        <option>Cheese</option>
+        <option>Pizza</option>
+        <option>Watermelon</option>
+        <option>Banana</option>
+        <option>Bagel</option>
+      </select>
+      <h3>Enter your phone number here:</h3>
+      (<input
+        type="number"
+        onkeydown="if(this.value.length === 3) document.getElementById('restOfPhoneNumber').focus()"
+      />)
+      <input
+        id="restOfPhoneNumber"
+        type="number"
+        onkeydown="if(this.value.length === 7) document.getElementById('enjoyableTextArea').focus()"
+      /><br /><br />
+      <textarea
+        id="enjoyableTextArea"
+        placeholder="Enjoy this random text area"
+      ></textarea>
+      <h3>Enter a secret word here:</h3>
+      <input
+        id="secret1"
+        type="password"
+        onkeydown="checkPasswords()"
+        required
+      />
+      <h3>Enter the secret word again here:</h3>
+      <input
+        id="secret2"
+        type="password"
+        onkeydown="checkPasswords()"
+        required
+      />
+      <h3>Enter a username containing only alphanumeric characters</h3>
+      <input id="username" type="text" pattern="^[a-zA-Z0-9]+$" />
+      <h3>Any text you enter below will become all caps:</h3>
+      <input class="caps" type="text" />
+      <br /><br />
+      <input type="submit" id="submitButton" disabled />
     </form>
   </body>
 </html>

@@ -53,18 +53,70 @@ body {
   background-color: black;
 }
 
-table {
-  border-style: solid;
+div {
+  display: inline-block;
 }
 
-tr {
-  border-style: solid;
+.first {
+  border: solid;
+  font-family: Comic Sans MS;
+  background-color: yellow;
+  color: blue;
+  position: relative;
+  left: 30px;
+  font-style: italic;
+  margin: 5%;
+}
+
+.second {
+  border: dotted;
+  font-family: Arial;
+  background-color: magenta;
+  color: green;
+  position: relative;
+  left: 60px;
+  font-weight: bold;
+  padding: 5%;
+}
+
+.third {
+  border: dashed;
+  font-family: Blippo, fantasy;
+  background-color: turquoise;
+  color: purple;
+  position: relative;
+  left: 90px;
+  text-decoration: line-through;
+  margin: 3%;
+  padding: 3%;
+}
+
+ul {
+  letter-spacing: 5px;
+  font-variant: small-caps;
+}
+
+table {
+  border-collapse: collapse;
 }
 
 td {
-  border-style: solid;
+  border: solid;
 }
 
-th {
-  border-style: solid;
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+/* input:invalid {
+  background-color: brown;
+}
+
+input:valid {
+  background-color: skyblue;
+} */
+
+.caps {
+  text-transform: uppercase;
 }
