@@ -109,14 +109,14 @@ input::-webkit-outer-spin-button {
   -webkit-appearance: none;
 }
 
-input:invalid {
-  background-color: brown;
-}
-
-input:valid {
-  background-color: skyblue;
-}
-
 .caps {
   text-transform: uppercase;
+}
+
+.passwordProt:invalid {
+  background-color: red;
+}
+
+.passwordProt:valid {
+  background-color: greenyellow;
 }

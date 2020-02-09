@@ -1,4 +1,6 @@
 let changes = 0;
+document.getElementById("secret1").setAttribute("isValid", false);
+document.getElementById("secret2").setAttribute("isValid", false);
 
 function changeThirdDiv() {
   changes++;
@@ -19,24 +21,26 @@ function changeSecondDivBackground() {
 
 function checkPasswords() {
   if (
-    document.getElementById("secret1").value ===
-    document.getElementById("secret2").value
+    document.getElementById("secret1").value.length > 0 &&
+    document.getElementById("secret1").value.length ===
+      document.getElementById("secret2").value
   ) {
-    document.getElementById("secret1").style.backgroundcolor = "orange";
-    document.getElementById("secret2").style.backgroundcolor = "orange";
+    document.getElementById("secret1").setAttribute("isValid", true);
+    document.getElementById("secret2").setAttribute("isValid", true);
   } else {
-    document.getElementById("secret1").style.backgroundColor = "cyan";
-    document.getElementById("secret2").style.backgroundcolor = "cyan";
+    document.getElementById("secret1").setAttribute("isValid", false);
+    document.getElementById("secret2").setAttribute("isValid", false);
   }
+  checkSubmit();
 }
 
-// function checkSubmit() {
-//   if (
-//     document.getElementById("secret1").innerHTML.length > 0 &&
-//     document.getElementById("secret1").innerHTML.length > 0
-//   ) {
-//     document.getElementById("submitButton").disabled = false;
-//   } else {
-//     document.getElementById("submitButton").disabled = true;
-//   }
-// }
+function checkSubmit() {
+  if (
+    document.getElementById("secret1").checkValidity() &&
+    document.getElementById("secret2").checkValidity()
+  ) {
+    document.getElementById("submitButton").disabled = false;
+  } else {
+    document.getElementById("submitButton").disabled = "disabled";
+  }
+}

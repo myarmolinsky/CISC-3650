@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="style.css" />*/
   </style>
   <link rel="stylesheet" href="../CSS/style.css" />
-  <script src="../JavaScript/script.js"></script>
   <body>
     <!--<p> tag puts everything inside it into a paragraph separate from other tags on the same layer as it-->
     <!--<strong> tag makes the text inside it bold-->
@@ -110,17 +109,17 @@
       ></textarea>
       <h3>Enter a secret word here:</h3>
       <input
+        class="passwordProt"
         id="secret1"
         type="password"
-        onkeydown="checkPasswords()"
-        required
+        oninput="checkPasswords()"
       />
       <h3>Enter the secret word again here:</h3>
       <input
+        class="passwordProt"
         id="secret2"
         type="password"
-        onkeydown="checkPasswords()"
-        required
+        oninput="checkPasswords()"
       />
       <h3>Enter a username containing only alphanumeric characters</h3>
       <input id="username" type="text" pattern="^[a-zA-Z0-9]+$" />
@@ -129,5 +128,7 @@
       <br /><br />
       <input type="submit" id="submitButton" disabled />
     </form>
+
+    <script src="../JavaScript/script.js"></script>
   </body>
 </html>
