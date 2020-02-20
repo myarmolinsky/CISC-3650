@@ -117,3 +117,12 @@ function checkRating() {
     "rater"
   ).value;
 }
+
+function initOurMap() {
+  var here = { lat: 40.6305, lng: 73.9521 };
+  var map = new google.maps.Map(document.getElementById("ourLocation"), {
+    zoom: 4,
+    center: here
+  });
+  var marker = new google.maps.Marker({ position: here, map: map });
+}
