@@ -6,9 +6,12 @@
     <form>
         <form>
             <h3>Personal Info:</h3>
-            <label for="firstName">First Name: </label><input type="text" id="firstName" required/>
-            <label for="lastName">Last Name: </label><input type="text" id="lastName" required/><br />
-            <label for="email">Email: </label><input type="email" id="email" required/>
+            <label for="firstName">First Name: </label><input type="text" id="firstName" required />
+            <label for="lastName">Last Name: </label><input type="text" id="lastName" required /><br />
+            <label for="email">Email: </label><input type="email" id="email" required /><br />
+            <label for="phoneNumber">Phone Number: </label>
+            (<input type="number" id="phoneNumber" class="areaCode" onkeydown="if(this.value.length === 3) document.getElementById('restOfPhoneNumber').focus()" required />)
+            <input type="text" id="restOfPhoneNumber" class="restOfPhoneNumber" maxlength="7" pattern="^[0-9]+$" required />
             <h3>What is your favorite Pokemon Type?</h3>
             <select required>
                 <option>Bug</option>
@@ -66,7 +69,17 @@
                 <option>Sword</option>
                 <option>Shield</option>
             </select>
-            <br /><br /><input type="submit" id="submitButton" disabled />
+            <h3>What's your favorite Pokemon? (Don't worry, we'll keep it a secret ;))</h3>
+            <input type="password" />
+            <h3>To make sure you are a REAL Pokemon fan, please drag Magikarp into the left box: </h3>
+            <div id="dragPokemonDiv1" class="dragPokemonDiv1" ondrop="drop(event); checkSubmit()" ondragover="allowDrop(event)"></div>
+            <div id="dragPokemonDiv2" class="dragPokemonDiv2" ondrop="drop(event); checkSubmit()" ondragover="allowDrop(event)">
+                <img onmouseup="checkSubmit()" id="pokemon1" draggable="true" ondragstart="drag(event)" src="../Resources/Pokemon_1.png" width="300px" height="250px" />
+                <img onmouseup="checkSubmit()" id="pokemon2" draggable="true" ondragstart="drag(event)" src="../Resources/Pokemon_2.png" width="250px" height="250px" />
+                <img onmouseup="checkSubmit()" id="pokemon3" draggable="true" ondragstart="drag(event)" src="../Resources/Pokemon_3.png" width="250px" height="250px" />
+            </div>
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            <input type="submit" id="submitButton" disabled />
         </form>
     </form>
     

@@ -2,11 +2,54 @@ body {
   background-color: skyblue;
 }
 
+a {
+  color: blue;
+}
+
+.homepageHeading {
+  font-family: Impact, Charcoal, sans-serif;
+  font-size: 50px;
+  text-align: center;
+}
+
+.homepageSubheading {
+  font-family: Impact, Charcoal, sans-serif;
+  font-size: 30px;
+  text-align: center;
+}
+
 .name {
   font-size: 16px;
   font-weight: bold;
 }
 
-a {
-  color: blue;
+.areaCode {
+  width: 30px;
+}
+
+.restOfPhoneNumber {
+  width: 70px;
+}
+
+.dragPokemonDiv1 {
+  float: left;
+  width: 300px;
+  height: 250px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid;
+}
+
+.dragPokemonDiv2 {
+  float: left;
+  width: 825px;
+  height: 250px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
 }
