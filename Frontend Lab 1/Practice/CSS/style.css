@@ -1,0 +1,122 @@
+/*
+while HTML uses tags, CSS uses selectors. selectors can be HTML tags or classes
+giving a selector a certain style will apply that style to everything in the HTML file which has that selector (tag or class)
+
+there are different units of measurement in css:
+- px is pixels (ex. 12px)
+- em is for calculated size of a font (ex. font-size: 2em is two times the current font size)
+- pt is points (the same kind we used when writing a paper)
+- % is for percentages (ex. width: 80%)
+- others include pc (picas), cm (centimeters), mm (milimeters), in (inches)
+values of 0 do not need a unit
+
+there are 3 ways of choosing a color: the name of the color, the RGB sequence of the color, and the hex code of the color
+examples (all of which are the reddest red possible in this case):
+- red
+- rgb(255, 0, 0)
+- rgb(100%, 0%, 0%)
+- #ff0000
+- #f00
+
+font-family is for choosing the font of the text you're stylizing (the user's browser must be able to find the specified font)
+font-size is for the size of the font
+font-weight is for whether the text is bold or not (you can put normal or bold for it)
+font-style is for italics (you can put normal or italic for it)
+font-variant is for replacing lower case letters with small uppercase letters (you can put normal or small-caps for it)
+text-transform is for converting the text to lowercase, uppercase, or making the first character in each word capitalized
+    (you can put normal, lowercase, uppercase, or capitalize for it)
+text-decoration is for putting a line under, over, or through the text
+    (you can put none, underline, overline, or line-through for it)
+letter-spacing is for making the spacing between letters normal or justified (you can put normal or a length for it)
+word-spacing is for making the spacing between words normal or justified (you can put normal or a length for it)
+line-height sets the height of the lines without adjusting the font (you can put normal, a percentage, or a length for it)
+    (ex. putting just 2 would make the line height 2 times the size of the font)
+text-align will align the text to the left, right, center, or justified (you can put left, right, center, or justify for it)
+text-indent will indent the first line of a paragraph to a given length or percentage (you can put a length or a percentage for it)
+
+margins are the space outside something
+padding is the space inside something
+you can adjust all margins with margin or all padding with padding
+you can also adjust individual sides with margin-left, margin-right, margin-top, margin-bottom,
+    padding-top, padding-left, padding-right, padding-bottom
+
+borders can be applied to most HTML elements with border-style
+the border styles are solid, dotted, dashed, double, groove, ridge, inset, and outset
+border-width sets the width of the border
+    (you can also use border-top-width, border-bottom-width, border-right-width, border-left-width)
+border-color sets the color of the border
+*/
+
+body {
+  font-size: 14px;
+  color: lightgray;
+  background-color: black;
+}
+
+div {
+  display: inline-block;
+}
+
+.first {
+  border: solid;
+  font-family: Comic Sans MS;
+  background-color: yellow;
+  color: blue;
+  position: relative;
+  left: 30px;
+  font-style: italic;
+  margin: 5%;
+}
+
+.second {
+  border: dotted;
+  font-family: Arial;
+  background-color: magenta;
+  color: green;
+  position: relative;
+  left: 60px;
+  font-weight: bold;
+  padding: 5%;
+}
+
+.third {
+  border: dashed;
+  font-family: Blippo, fantasy;
+  background-color: turquoise;
+  color: purple;
+  position: relative;
+  left: 90px;
+  text-decoration: line-through;
+  margin: 3%;
+  padding: 3%;
+}
+
+ul {
+  letter-spacing: 5px;
+  font-variant: small-caps;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td {
+  border: solid;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.caps {
+  text-transform: uppercase;
+}
+
+.passwordProt:invalid {
+  background-color: red;
+}
+
+.passwordProt:valid {
+  background-color: greenyellow;
+}
