@@ -94,10 +94,37 @@ function toggleAudio() {
   }
 }
 
-var theme = true;
 function toggleTheme() {
-  theme = !theme;
-  if (theme) {
+  if (sessionStorage.getItem("theme") !== null) {
+  } else {
+    sessionStorage.setItem("theme", "light");
+  }
+  console.log(sessionStorage.getItem("theme"));
+  sessionStorage.setItem(
+    "theme",
+    sessionStorage.getItem("theme") === "light" ? "dark" : "light"
+  );
+  if (sessionStorage.getItem("theme") === "light") {
+    document.getElementById("theme").innerHTML =
+      "You are currently using light theme, click the button below to switch to dark theme";
+    document.body.style = "background-color: skyblue;";
+    document.getElementById("theme").style =
+      "background-color: cornflowerblue; border-radius: 5px; display: inline;";
+  } else {
+    document.getElementById("theme").innerHTML =
+      "You are currently using dark theme, click the button below to switch to light theme";
+    document.body.style = "background-color: black; color: lightgray";
+    document.getElementById("theme").style =
+      "background-color: navy; border-radius: 5px; display: inline;";
+  }
+}
+
+function activateTheme() {
+  if (sessionStorage.getItem("theme") !== null) {
+  } else {
+    sessionStorage.setItem("theme", "light");
+  }
+  if (sessionStorage.getItem("theme") === "light") {
     document.getElementById("theme").innerHTML =
       "You are currently using light theme, click the button below to switch to dark theme";
     document.body.style = "background-color: skyblue;";
@@ -118,11 +145,27 @@ function checkRating() {
   ).value;
 }
 
-function initOurMap() {
-  var here = { lat: 40.6305, lng: 73.9521 };
-  var map = new google.maps.Map(document.getElementById("ourLocation"), {
-    zoom: 4,
-    center: here
-  });
-  var marker = new google.maps.Marker({ position: here, map: map });
+function getCoords() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    document.getElementById("coords").innerHTML =
+      "No geological coordinates available";
+  }
+}
+
+function showPosition(position) {
+  document.getElementById("coords").innerHTML =
+    "Latitude: " +
+    position.coords.latitude +
+    ", Longitude: " +
+    position.coords.longitude;
+}
+
+function initMap() {
+  var mapProp = {
+    center: new google.maps.LatLng(34.9686444587, 135.7537),
+    zoom: 5
+  };
+  var map = new google.maps.Map(document.getElementById("map"), mapProp);
 }

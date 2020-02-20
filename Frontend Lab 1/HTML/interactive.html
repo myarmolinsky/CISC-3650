@@ -1,8 +1,20 @@
 <!DOCTYPE html>
 <title>Pokemon Fansite Give Interactive</title>
 <link rel="stylesheet" href="../CSS/style.css" />
-<body>
-    <a href="./index.html">Go back to homepage</a>
+<body onload="activateTheme()">
+    <a href="./index.html">Go back to homepage</a><br /><br />
+    <div id="audioDiv">
+        <audio>
+          <source src="../Resources/music.mp3" type="audio/mpeg" />
+        </audio>
+      </div>
+      <button onclick="toggleAudio()">Toggle Audio</button><br />
+    <div id="theme">
+        You are currently using light theme, click the button below to switch to
+        dark theme
+    </div>
+    <br />
+    <button onclick="toggleTheme()">Toggle Theme</button>
     <form>
         <form>
             <h3>Personal Info:</h3>

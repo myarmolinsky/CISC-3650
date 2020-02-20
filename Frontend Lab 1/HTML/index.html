@@ -2,22 +2,19 @@
 <html>
   <title>Pokemon Fansite Homepage</title>
   <link rel="stylesheet" href="../CSS/style.css" />
-  <body>
+  <body onload="activateTheme()">
     <div class="homepageHeading">
       WELCOME TO THE UNOFFICIAL POKEMON FANSITE!
     </div>
     <div class="homepageSubheading">
       Your guide to the fantastical world of Pokemon!
     </div>
-    <!-- <div id="audioDiv">
-      <audio controls>
-        <source
-          src="../Resources/music.mp3"
-          type="audio/mpeg"
-        />
+    <div id="audioDiv">
+      <audio>
+        <source src="../Resources/music.mp3" type="audio/mpeg" />
       </audio>
     </div>
-    <button onclick="toggleAudio()">Toggle Audio</button> -->
+    <button onclick="toggleAudio()">Toggle Audio</button><br />
     <div id="theme">
       You are currently using light theme, click the button below to switch to
       dark theme
@@ -97,7 +94,7 @@
     </ul>
     <h2>Site Links:</h2>
     <ul>
-      <li><a href="./about.html">About Us</a></li>
+      <li><a href="./locations.html">Compare Geological Locations</a></li>
       <li><a href="./interactive.html">Tell us about yourself!</a></li>
     </ul>
 
