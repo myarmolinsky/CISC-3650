@@ -57,3 +57,15 @@ function showSlides(n) {
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
 }
+
+function toggleAudio() {
+  if (
+    document.getElementById("audioDiv").firstElementChild !== null &&
+    document.getElementById("audioDiv").firstElementChild.tagName === "audio"
+  ) {
+    document.getElementById("audioDiv").innerHTML =
+      '<audio><source src="../Resources/Relaxing Pokémon Music Compilation.mp3" type="audio/mpeg"/></audio>';
+  } else {
+    document.getElementById("audioDiv").innerHTML = "";
+  }
+}
