@@ -12,6 +12,10 @@
             <label for="phoneNumber">Phone Number: </label>
             (<input type="number" id="phoneNumber" class="areaCode" onkeydown="if(this.value.length === 3) document.getElementById('restOfPhoneNumber').focus()" required />)
             <input type="text" id="restOfPhoneNumber" class="restOfPhoneNumber" maxlength="7" pattern="^[0-9]+$" required />
+            <h3>Please enter the approximate date you learned about the Pokemon Franchise:</h3>
+            <input type="date" required />
+            <h3>On a scale of 1-10 (10 being the best and 0 being the worst), how would you rate the Pokemon franchise?</h3>
+            <input id="rater" onchange="checkRating()" type="range" min="0" max="10" required /><span id="rating">5</span>
             <h3>What is your favorite Pokemon Type?</h3>
             <select required>
                 <option>Bug</option>
@@ -34,7 +38,7 @@
                 <option>Water</option>
             </select>
             <h3>Which Pokemon games have you played?</h3>
-            <select multiple required>
+            <select multiple>
                 <option>Red</option>
                 <option>Green</option>
                 <option>Blue</option>
@@ -69,8 +73,14 @@
                 <option>Sword</option>
                 <option>Shield</option>
             </select>
+            <h3>Tell us something exciting in the box below:</h3>
+            <input class="caps" rows="10" cols="50" type="text">
+            <h3>Name as many Pokemon as you can in the box below:</h3>
+            <textarea rows="10", cols="50"></textarea>
             <h3>What's your favorite Pokemon? (Don't worry, we'll keep it a secret ;))</h3>
-            <input type="password" />
+            <input id="favPoke1" onkeyup="checkSubmit()" type="password" required/>  <span id="passwordsMatch"></span>
+            <h3>Please enter your favorite Pokemon again (must match the one you entered above)</h3>
+            <input id="favPoke2" onkeyup="checkSubmit()" type="password" required/>
             <h3>To make sure you are a REAL Pokemon fan, please drag Magikarp into the left box: </h3>
             <div id="dragPokemonDiv1" class="dragPokemonDiv1" ondrop="drop(event); checkSubmit()" ondragover="allowDrop(event)"></div>
             <div id="dragPokemonDiv2" class="dragPokemonDiv2" ondrop="drop(event); checkSubmit()" ondragover="allowDrop(event)">

@@ -6,6 +6,12 @@ a {
   color: blue;
 }
 
+#theme {
+  background-color: cornflowerblue;
+  border-radius: 5px;
+  display: inline;
+}
+
 .homepageHeading {
   font-family: Impact, Charcoal, sans-serif;
   font-size: 50px;
@@ -140,4 +146,13 @@ a {
 input::-webkit-inner-spin-button,
 input::-webkit-outer-spin-button {
   -webkit-appearance: none;
+}
+
+.caps {
+  text-transform: uppercase;
+}
+
+#rating {
+  font-size: 1.5em;
+  font-weight: bold;
 }
